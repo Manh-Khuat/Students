@@ -4,3 +4,47 @@
   display: flex;
   align-items: center;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  font-size: 20px;
+  width: 100%;
+  padding: 8px 12px;
+}
+
+select {
+  font-size: 20px;
+  width: 100%;
+  padding: 8px 12px;
+  height: 100%;
+}
+ 
+
+.subject {
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.subject:focus {
+  outline: none;
+}
+
+.subject-outline {
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  background-color: #fff;
+  color: rgb(159, 150, 150);
+}
+
+.subject-outline:focus {
+  outline: none;
+}

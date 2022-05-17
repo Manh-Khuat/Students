@@ -11,6 +11,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { search } from "../../../redux/features/studentSlice";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -55,6 +57,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+  const [name, setName] = React.useState("")
+  const dispatch = useDispatch()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -78,7 +82,7 @@ export default function SearchAppBar() {
               STUDENT
             </Link>
           </Typography>
-          <Search sx={{ marginRight: "50px" }}>
+          <Search onChange={e => dispatch(search(e.target.value))} sx={{ marginRight: "50px" }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

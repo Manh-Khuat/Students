@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import StudentReducer from "./features/studentSlice";
 
-export default configureStore({
+export default configureStore({      /* Cấu hình reducer */
   reducer: {
-    student: StudentReducer,
+    students: StudentReducer,
   },
 });
